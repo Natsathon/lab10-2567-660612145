@@ -2,7 +2,12 @@
 
 import { IconMailForward, IconMapPins } from "@tabler/icons-react";
 
-export default function UserCardDetail({ email, address }) {
+interface UserCardDetailProps {
+  email: string;
+  address: string;
+}
+
+const UserCardDetail: React.FC<UserCardDetailProps> = ({ email, address }) => {
   return (
     <div className="text-center">
       <p>
@@ -13,4 +18,6 @@ export default function UserCardDetail({ email, address }) {
       </p>
     </div>
   );
-}
+};
+
+export default UserCardDetail;
